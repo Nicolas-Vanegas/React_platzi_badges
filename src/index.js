@@ -11,7 +11,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
-import Badge from "./components/Badge"; /* const element = React.createElement("h1", {}, `Hola, soy ${name}`); */ /* const jsx = <h1>Hola, soy {name}</h1>; */ /* const element = (
+import BadgeNew from "./pages/BadgeNew"; /* const element = React.createElement("h1", {}, `Hola, soy ${name}`); */ /* const jsx = <h1>Hola, soy {name}</h1>; */ /* const element = (
   <div>
     <h1>Hola, soy {name}</h1>
     <p>Soy ingeniero Civil</p>
@@ -27,8 +27,9 @@ import Badge from "./components/Badge"; /* const element = React.createElement("
 /* const jsx = <h1>Hello, PLatzi Badges from React!</h1>; */
 //alternativa a jsx
 /* const element = React.createElement("a", { href: "https://youtube.com" }, "Ir a platzi"); */
-/* const name = "Pedro"; */ const container = document.getElementById("app");
+/* const name = "Pedro"; */
+const container = document.getElementById("app");
 
 /* ReactDOM.render(_qué_,_dónde_) */
 //Si no tienen los </> es un componente, pero a reactDOM.render hay que darle un elemento, por eso le ponemos </> al Badge el cual es originalmente un componente
-ReactDOM.render(<Badge />, container);
+ReactDOM.render(<BadgeNew />, container);
