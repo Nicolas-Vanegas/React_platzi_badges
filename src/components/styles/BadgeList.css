@@ -1,0 +1,25 @@
+.BadgeList_item {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  font-family: "lato", sans-serif;
+  border: 1px solid #3332321c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.BadgeList_item img {
+  margin-right: 2rem;
+  border-radius: 50%;
+}
+.BadgeList_item p {
+  margin-bottom: 0;
+}
+.BadgeList_item .name {
+  font-weight: 600;
+  color: rgb(32, 31, 97);
+}
+.BadgeList_item .twitter {
+  font-weight: 600;
+  color: rgb(10, 110, 192);
+}

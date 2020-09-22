@@ -6,7 +6,6 @@ import BadgeForm from "../components/BadgeForm";
 import Badge from "../components/Badge";
 import "../components/styles/Hero.css";
 import logoHero from "../images/platziconf-logo.svg";
-import Navbar from "../components/Navbar";
 
 class BadgeNew extends Component {
   /* Técnica para que el estado cambie en badgeNew y no en badgeform */
@@ -31,7 +30,7 @@ class BadgeNew extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="BadgeNew_hero">
           <img src={logoHero} alt="logo" className="Logo_hero" />
         </div>

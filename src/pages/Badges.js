@@ -1,8 +1,9 @@
 import React from "react";
+/* el Link sirve para reemplazar el elemento de html <a> y que al dar click en el elemento te redirija a la nueva página sin recargar la ventana */
+import { Link } from "react-router-dom";
 
-import Hero from "./styles/Badges.css";
+import "./styles/Badges.css";
 import confLogo from "../images/badge-header.svg";
-import Navbar from "../components/Navbar";
 import BadgesList from "../components/BadgesList";
 
 class Badges extends React.Component {
@@ -41,21 +42,22 @@ class Badges extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        {/* <Navbar /> lo pasamos para otro archivo para reducir código y que no esté en todas las páginas*/}
 
         <div className="Badges">
           <div className="Badges__hero">
             <div className="Badges__container">
-              <img className="Badges_conf-logo" src={confLogo} alt="Conf Logo" />
+              <img className="Badges__conf-logo" src={confLogo} alt="Conf Logo" />
             </div>
           </div>
         </div>
 
-        <div className="Badge_container">
-          <div className="Badge_buttons">
-            <a href="/badges/new" className="btn btn-primary">
+        <div className="Badges__container">
+          <div className="Badges__buttons">
+            {/* Link para que la página no se recargue */}
+            <Link to="/badges/new" className="btn btn-primary">
               New Badge
-            </a>
+            </Link>
           </div>
           <div className="Badges__list">
             <div className="Badges__container">
