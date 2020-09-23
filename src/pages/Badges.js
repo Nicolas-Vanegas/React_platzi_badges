@@ -41,7 +41,7 @@ class Badges extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         {/* <Navbar /> lo pasamos para otro archivo para reducir código y que no esté en todas las páginas*/}
 
         <div className="Badges">
@@ -66,7 +66,7 @@ class Badges extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

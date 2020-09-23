@@ -1,0 +1,22 @@
+.NotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+  background-image: url(../../images/stars.svg);
+  background-color: rgb(13, 16, 24);
+}
+.NotFound__content {
+  color: white;
+  text-align: end;
+  margin-right: 3vw;
+}
+.NotFound__content h1 {
+  font-size: 3rem;
+}
+.NotFound__content p {
+  font-size: 2rem;
+}
+.NotFound img {
+  height: 80%;
+}

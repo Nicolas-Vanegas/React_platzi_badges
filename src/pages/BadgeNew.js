@@ -29,7 +29,8 @@ class BadgeNew extends Component {
   };
   render() {
     return (
-      <div>
+      /* Es como un div pero que no se vé, para no tener divs innecesarios */
+      <React.Fragment>
         {/* <Navbar /> */}
         <div className="BadgeNew_hero">
           <img src={logoHero} alt="logo" className="Logo_hero" />
@@ -53,7 +54,7 @@ class BadgeNew extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
