@@ -10,6 +10,7 @@
 }
 .BadgeList_item img {
   margin-right: 2rem;
+  width: 6.5vw;
   border-radius: 50%;
 }
 .BadgeList_item p {

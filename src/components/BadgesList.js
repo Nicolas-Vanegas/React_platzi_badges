@@ -10,14 +10,14 @@ class BadgesList extends React.Component {
             /* Cada hijo en una lista tiene que tener un hijo único llamado key, esto ayuda a React para poder determinar cuando el elemento se vuelve a renderizar si se mantuvo en la lista o si cambió (Le asignamos id de key porque tiene que ser único)*/
             <li className="BadgeList_item" key={badge.id}>
               <div className="list__imagen">
-                <img src={badge.avatarUrl} alt="avatar" />
+                <img src={badge.image} alt="avatar" />
               </div>
               <div className="list_info">
                 <p className="name">
-                  {badge.firstName} {badge.lastName}
+                  {badge.name} {badge.name}
                 </p>
-                <p className="twitter">@{badge.twitter}</p>
-                <p>{badge.jobTitle}</p>
+                <p className="twitter">{badge.species}</p>
+                <p className="monda">{badge.id}</p>
               </div>
             </li>
           );
