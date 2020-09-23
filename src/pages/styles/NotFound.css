@@ -20,3 +20,6 @@
 .NotFound img {
   height: 80%;
 }
+.serverError {
+  width: 40%;
+}
