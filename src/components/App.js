@@ -5,7 +5,7 @@ import Layout from "./Layout";
 import BadgeNew from "../pages/BadgeNew";
 import Badges from "../pages/Badges";
 import NotFound from "../pages/NotFound";
-import Home from "../pages/Main";
+import Home from "../pages/Home";
 
 function App() {
   return (
