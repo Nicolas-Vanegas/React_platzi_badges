@@ -440,6 +440,46 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstName": "Nicolás",
+      "lastName": "Vanegas",
+      "email": "nicolas.vanegas.p@hotmail.com",
+      "jobTittle": "Front-end Developer",
+      "twitter": "@donChimbo",
+      "id": "160HH9P"
+    },
+    {
+      "firstName": "Pedro",
+      "lastName": "Picapiedra",
+      "email": "puraPiedra@hotmail.com",
+      "jobTittle": "Picador de Piedra",
+      "twitter": "elQuePica",
+      "id": "nOcV3Wx"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "jobTittle": "",
+      "twitter": "",
+      "id": "cWP7eSy"
+    },
+    {
+      "firstName": "Pablo",
+      "lastName": "Marmol",
+      "email": "sisassisas@gmail.com",
+      "jobTittle": "asistente de picador",
+      "twitter": "elQuePicax2",
+      "id": "SQVbkkG"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "jobTittle": "",
+      "twitter": "",
+      "id": "BxxUFG_"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/Badge.css";
 import confLogo from "../images/badge-header.svg";
+import Gravatar from "../components/gravatar";
 
 //Los componentes son clases. con extends para crear una clase que es hija de otra, en este caso creamos Bagde apartir de React.Component
 class Badge extends React.Component {
@@ -17,7 +18,8 @@ class Badge extends React.Component {
         </div>
 
         <div className="Badge_section-name">
-          <img className="Badge_avatar" src={this.props.avatarUrl} alt="Avatar" />
+          {/* <img className="Badge_avatar" src={this.props.avatarUrl} alt="Avatar" /> */}
+          <Gravatar className="Badge_avatar" email={this.props.email} alt="Avatar" />
           <h1>
             {this.props.firstName} <br /> {this.props.lastName}
           </h1>
@@ -25,7 +27,8 @@ class Badge extends React.Component {
 
         <div className="Badge_section-info">
           <h3 className="profesión">{this.props.jobTittle}</h3>
-          <p className="twitter">{this.props.twitter}</p>
+          <p className="twitter">@{this.props.twitter}</p>
+          <p className="twitter">{this.props.email}</p>
         </div>
 
         <div className="Badge_footer">#platziconf</div>
