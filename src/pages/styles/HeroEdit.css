@@ -1,0 +1,12 @@
+.BadgeEdit_hero {
+  display: flex;
+  justify-content: center;
+  background: url(../../images/stars.svg);
+  background-color: rgb(13, 16, 24);
+  display: flex;
+  align-items: center;
+  height: 300px;
+}
+.Logo_hero {
+  height: 150px;
+}

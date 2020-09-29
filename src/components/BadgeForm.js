@@ -29,7 +29,7 @@ class BadgeForm extends React.Component {
   render() {
     return (
       <div>
-        <h1>New Attendant</h1>
+        {/* <h1>New Attendant</h1> */}
         <form onSubmit={this.props.onSubmit} className="BadgeForm">
           <div className="form-group">
             <label>First Name</label>

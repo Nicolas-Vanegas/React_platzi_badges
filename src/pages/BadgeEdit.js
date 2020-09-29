@@ -1,18 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 
 //vamos trayendo los componentes que vamos necesitando en la página
 //Como hacemos el hero solo en esta página, y no es un componente, entonces hacemos todo acá
-import "../components/styles/Hero.css";
+import "./styles/HeroEdit.css";
 import BadgeForm from "../components/BadgeForm";
 import logoHero from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import PageLoading from "../components/pageLoading";
 import api from "../api";
 
-class BadgeNew extends Component {
-  /* Técnica para que el estado cambie en badgeNew y no en badgeform */
+class BadgeEdit extends React.Component {
+  /* true porque su inicaliza con una petición */
   state = {
-    loading: false,
+    loading: true,
     error: null,
     form: {
       firstName: "",
@@ -21,6 +21,23 @@ class BadgeNew extends Component {
       jobTittle: "",
       twitter: "",
     },
+  };
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async e => {
+    this.setState({ loading: true, error: null });
+
+    //read toma el id del badge que se pulsó. match.params sirve para que acceder a cada una de las variables que tenemos en el pad que declaramos en la ruta del Link ese props viene de react routers
+    try {
+      const data = await api.badges.read(this.props.match.params.badgeId);
+      //Guardamos la data en form porque es donde estamos guardando los datos de este formulario
+      this.setState({ loading: false, form: data });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
   };
 
   handleChange = e => {
@@ -38,8 +55,8 @@ class BadgeNew extends Component {
     this.setState({ loading: true, error: null });
 
     try {
-      //create es una función que creó en la api que también creo el man cuando mando el formulario se crea un nuevo badge en Badges esto se le conoce como POST
-      await api.badges.create(this.state.form);
+      //Acá el botón actualiza El cual recibe un badgeId y la información que queremos actualizar
+      await api.badges.update(this.props.match.params.badgeId, this.state.form);
       this.setState({ loading: false });
 
       //history.push para redirigir al usuario a /badges
@@ -56,7 +73,7 @@ class BadgeNew extends Component {
       /* Es como un div pero que no se vé, para no tener divs innecesarios */
       <React.Fragment>
         {/* <Navbar /> */}
-        <div className="BadgeNew_hero">
+        <div className="BadgeEdit_hero">
           <img src={logoHero} alt="logo" className="Logo_hero" />
         </div>
 
@@ -76,7 +93,7 @@ class BadgeNew extends Component {
             </div>
             {/* Le añadimos el prop de error que al capturar el error en caso de que halla al enviar el formulario, lo imprima aquí */}
             <div className="col-6">
-              <h1>New Attendant</h1>
+              <h1>Edit Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}
                 formValues={this.state.form}
@@ -91,4 +108,4 @@ class BadgeNew extends Component {
   }
 }
 
-export default BadgeNew;
+export default BadgeEdit;
