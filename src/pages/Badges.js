@@ -21,6 +21,14 @@ class Badges extends React.Component {
   //En el componentdidmount es el mejor lugar para comenzar la petición a una API
   componentDidMount() {
     this.fetchData();
+
+    //Los estudiantes dicen que esta forma de hacer la actualización automática es mala práctica
+    this.intervalId = setInterval(this.fetchData, 5000);
+  }
+
+  componentWillUnmount() {
+    //Esto es para que cuando dejemos esta página, el interval no se ejecute más
+    clearInterval(this.intervalId);
   }
 
   fetchData = async () => {
@@ -37,7 +45,8 @@ class Badges extends React.Component {
 
   render() {
     console.log("2/4. Render()");
-    if (this.state.loading === true) {
+    //Si el loading es true y no hay datos carga el loader
+    if (this.state.loading === true && !this.state.data) {
       //Componente para enseñar animación de loader
       return <PageLoading />;
     }
