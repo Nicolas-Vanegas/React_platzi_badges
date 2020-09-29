@@ -6,7 +6,7 @@ import "../components/styles/Hero.css";
 import BadgeForm from "../components/BadgeForm";
 import logoHero from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
-import PageLoading from "../components/pageLoading";
+import PageLoading from "../components/PageLoading";
 import api from "../api";
 
 class BadgeNew extends Component {
