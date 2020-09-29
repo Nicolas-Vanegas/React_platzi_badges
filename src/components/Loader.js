@@ -9,6 +9,7 @@ export class Loader extends Component {
         <div />
         <div />
         <div />
+        {/* Acá iba hacer un loader pero me dio pereza */}
         <div />
         <div />
         <div />

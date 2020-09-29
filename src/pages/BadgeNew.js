@@ -69,7 +69,7 @@ class BadgeNew extends Component {
                 firstName={this.state.form.firstName || "First Name"}
                 lastName={this.state.form.lastName || "Last Name"}
                 twitter={this.state.form.twitter || "Twitter"}
-                jobTittle={this.state.form.jobTittle || "Job Tittle"}
+                jobTittle={this.state.form.jobTitle || "Job Tittle"}
                 email={this.state.form.email || "Email"}
                 avatarUrl="https://i.imgur.com/UxrOwt8.jpg"
               />

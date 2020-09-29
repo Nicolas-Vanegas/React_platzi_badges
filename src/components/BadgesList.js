@@ -25,7 +25,7 @@ class BadgesList extends React.Component {
           return (
             /* Cada hijo en una lista tiene que tener un hijo único llamado key, esto ayuda a React para poder determinar cuando el elemento se vuelve a renderizar si se mantuvo en la lista o si cambió (Le asignamos id de key porque tiene que ser único)*/
             <li key={badge.id}>
-              <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}/edit`}>
+              <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}`}>
                 <BadgeListItem badge={badge} />
               </Link>
             </li>
