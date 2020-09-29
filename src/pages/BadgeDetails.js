@@ -1,11 +1,11 @@
 //Si el componente se encarga de presentar la interfaz basta con el nombre del componente
 import React from "react";
-import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
 import "./styles/BadgeDetailsContainer.css";
 import confLogo from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
+import DeleteBadgeModal from "../components/DeleteBadgeModal";
 
 //Usamos función cuando no usamos lógica
 function BadgeDetails(props) {
@@ -48,9 +48,14 @@ function BadgeDetails(props) {
                 </Link>
               </div>
               <div>
-                <button className="btn btn-danger">Delete</button>
-                {/* Esto es para crear un portal, recibe dos argumentos, qué queremos renderizar, y en dónde En este caso mostramos ese h1 en el div con nombre modal*/}
-                {ReactDOM.createPortal(<h1>Hola, realmente no estoy Aquí</h1>, document.getElementById("modal"))}
+                <button onClick={props.onOpenModal} className="btn btn-danger">
+                  Delete
+                </button>
+                <DeleteBadgeModal
+                  isOpen={props.modalIsOpen}
+                  onClose={props.onCloseModal}
+                  onDeleteBadge={props.onDeleteBadge}
+                />
               </div>
             </div>
           </div>
