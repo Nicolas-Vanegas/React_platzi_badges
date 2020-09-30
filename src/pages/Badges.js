@@ -37,7 +37,7 @@ class Badges extends React.Component {
 
     try {
       const data = await api.badges.list();
-      this.setState({ loading: false, data: data });
+      this.setState({ loading: false, data: data.reverse() });
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
